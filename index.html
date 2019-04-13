@@ -1,712 +1,212 @@
-<!DOCTYPE html>
-<!--[if lt IE 8 ]><html class="no-js ie ie7" lang="en"> <![endif]-->
-<!--[if IE 8 ]><html class="no-js ie ie8" lang="en"> <![endif]-->
-<!--[if (gte IE 8)|!(IE)]><!-->
-<html class="no-js" lang="en"> <!--<![endif]-->
+<!doctype html>
+<html>
 <head>
+<meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
+<title>README</title><style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color:#ffffff; --text-color:#333333; --select-text-bg-color:#B5D6FC; --select-text-font-color:auto; --monospace:"Lucida Console",Consolas,"Courier",monospace; }
+html { font-size: 14px; background-color: var(--bg-color); color: var(--text-color); font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
+body { margin: 0px; padding: 0px; height: auto; bottom: 0px; top: 0px; left: 0px; right: 0px; font-size: 1rem; line-height: 1.42857; overflow-x: hidden; background: inherit; }
+iframe { margin: auto; }
+a.url { word-break: break-all; }
+a:active, a:hover { outline: 0px; }
+.in-text-selection, ::selection { text-shadow: none; background: var(--select-text-bg-color); color: var(--select-text-font-color); }
+#write { margin: 0px auto; height: auto; width: inherit; word-break: normal; word-wrap: break-word; position: relative; white-space: normal; overflow-x: visible; padding-top: 40px; }
+#write.first-line-indent p { text-indent: 2em; }
+#write.first-line-indent li p, #write.first-line-indent p * { text-indent: 0px; }
+#write.first-line-indent li { margin-left: 2em; }
+.for-image #write { padding-left: 8px; padding-right: 8px; }
+body.typora-export { padding-left: 30px; padding-right: 30px; }
+.typora-export .footnote-line, .typora-export li, .typora-export p { white-space: pre-wrap; }
+@media screen and (max-width: 500px) {
+  body.typora-export { padding-left: 0px; padding-right: 0px; }
+  .CodeMirror-sizer { margin-left: 0px !important; }
+  .CodeMirror-gutters { display: none !important; }
+}
+#write li > figure:first-child { margin-top: -20px; }
+#write ol, #write ul { position: relative; }
+img { max-width: 100%; vertical-align: middle; }
+button, input, select, textarea { color: inherit; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; font-size: inherit; line-height: inherit; font-family: inherit; }
+input[type="checkbox"], input[type="radio"] { line-height: normal; padding: 0px; }
+*, ::after, ::before { box-sizing: border-box; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p, #write pre { width: inherit; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p { position: relative; }
+h1, h2, h3, h4, h5, h6 { break-after: avoid-page; break-inside: avoid; orphans: 2; }
+p { orphans: 4; }
+h1 { font-size: 2rem; }
+h2 { font-size: 1.8rem; }
+h3 { font-size: 1.6rem; }
+h4 { font-size: 1.4rem; }
+h5 { font-size: 1.2rem; }
+h6 { font-size: 1rem; }
+.md-math-block, .md-rawblock, h1, h2, h3, h4, h5, h6, p { margin-top: 1rem; margin-bottom: 1rem; }
+.hidden { display: none; }
+.md-blockmeta { color: rgb(204, 204, 204); font-weight: 700; font-style: italic; }
+a { cursor: pointer; }
+sup.md-footnote { padding: 2px 4px; background-color: rgba(238, 238, 238, 0.7); color: rgb(85, 85, 85); border-radius: 4px; cursor: pointer; }
+sup.md-footnote a, sup.md-footnote a:hover { color: inherit; text-transform: inherit; text-decoration: inherit; }
+#write input[type="checkbox"] { cursor: pointer; width: inherit; height: inherit; }
+figure { overflow-x: auto; margin: 1.2em 0px; max-width: calc(100% + 16px); padding: 0px; }
+figure > table { margin: 0px !important; }
+tr { break-inside: avoid; break-after: auto; }
+thead { display: table-header-group; }
+table { border-collapse: collapse; border-spacing: 0px; width: 100%; overflow: auto; break-inside: auto; text-align: left; }
+table.md-table td { min-width: 32px; }
+.CodeMirror-gutters { border-right: 0px; background-color: inherit; }
+.CodeMirror { text-align: left; }
+.CodeMirror-placeholder { opacity: 0.3; }
+.CodeMirror pre { padding: 0px 4px; }
+.CodeMirror-lines { padding: 0px; }
+div.hr:focus { cursor: none; }
+#write pre { white-space: pre-wrap; }
+#write.fences-no-line-wrapping pre { white-space: pre; }
+#write pre.ty-contain-cm { white-space: normal; }
+.CodeMirror-gutters { margin-right: 4px; }
+.md-fences { font-size: 0.9rem; display: block; break-inside: avoid; text-align: left; overflow: visible; white-space: pre; background: inherit; position: relative !important; }
+.md-diagram-panel { width: 100%; margin-top: 10px; text-align: center; padding-top: 0px; padding-bottom: 8px; overflow-x: auto; }
+#write .md-fences.mock-cm { white-space: pre-wrap; }
+.md-fences.md-fences-with-lineno { padding-left: 0px; }
+#write.fences-no-line-wrapping .md-fences.mock-cm { white-space: pre; overflow-x: auto; }
+.md-fences.mock-cm.md-fences-with-lineno { padding-left: 8px; }
+.CodeMirror-line, twitterwidget { break-inside: avoid; }
+.footnotes { opacity: 0.8; font-size: 0.9rem; margin-top: 1em; margin-bottom: 1em; }
+.footnotes + .footnotes { margin-top: 0px; }
+.md-reset { margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: top; background: 0px 0px; text-decoration: none; text-shadow: none; float: none; position: static; width: auto; height: auto; white-space: nowrap; cursor: inherit; -webkit-tap-highlight-color: transparent; line-height: normal; font-weight: 400; text-align: left; box-sizing: content-box; direction: ltr; }
+li div { padding-top: 0px; }
+blockquote { margin: 1rem 0px; }
+li .mathjax-block, li p { margin: 0.5rem 0px; }
+li { margin: 0px; position: relative; }
+blockquote > :last-child { margin-bottom: 0px; }
+blockquote > :first-child, li > :first-child { margin-top: 0px; }
+.footnotes-area { color: rgb(136, 136, 136); margin-top: 0.714rem; padding-bottom: 0.143rem; white-space: normal; }
+#write .footnote-line { white-space: pre-wrap; }
+@media print {
+  body, html { border: 1px solid transparent; height: 99%; break-after: avoid; break-before: avoid; }
+  #write { margin-top: 0px; padding-top: 0px; border-color: transparent !important; }
+  .typora-export * { -webkit-print-color-adjust: exact; }
+  html.blink-to-pdf { font-size: 13px; }
+  .typora-export #write { padding-left: 32px; padding-right: 32px; padding-bottom: 0px; break-after: avoid; }
+  .typora-export #write::after { height: 0px; }
+  @page { margin: 20mm 0px; }
+}
+.footnote-line { margin-top: 0.714em; font-size: 0.7em; }
+a img, img a { cursor: pointer; }
+pre.md-meta-block { font-size: 0.8rem; min-height: 0.8rem; white-space: pre-wrap; background: rgb(204, 204, 204); display: block; overflow-x: hidden; }
+p > .md-image:only-child:not(.md-img-error) img, p > img:only-child { display: block; margin: auto; }
+p > .md-image:only-child { display: inline-block; width: 100%; }
+#write .MathJax_Display { margin: 0.8em 0px 0px; }
+.md-math-block { width: 100%; }
+.md-math-block:not(:empty)::after { display: none; }
+[contenteditable="true"]:active, [contenteditable="true"]:focus { outline: 0px; box-shadow: none; }
+.md-task-list-item { position: relative; list-style-type: none; }
+.task-list-item.md-task-list-item { padding-left: 0px; }
+.md-task-list-item > input { position: absolute; top: 0px; left: 0px; margin-left: -1.2em; margin-top: calc(1em - 10px); }
+.math { font-size: 1rem; }
+.md-toc { min-height: 3.58rem; position: relative; font-size: 0.9rem; border-radius: 10px; }
+.md-toc-content { position: relative; margin-left: 0px; }
+.md-toc-content::after, .md-toc::after { display: none; }
+.md-toc-item { display: block; color: rgb(65, 131, 196); }
+.md-toc-item a { text-decoration: none; }
+.md-toc-inner:hover { text-decoration: underline; }
+.md-toc-inner { display: inline-block; cursor: pointer; }
+.md-toc-h1 .md-toc-inner { margin-left: 0px; font-weight: 700; }
+.md-toc-h2 .md-toc-inner { margin-left: 2em; }
+.md-toc-h3 .md-toc-inner { margin-left: 4em; }
+.md-toc-h4 .md-toc-inner { margin-left: 6em; }
+.md-toc-h5 .md-toc-inner { margin-left: 8em; }
+.md-toc-h6 .md-toc-inner { margin-left: 10em; }
+@media screen and (max-width: 48em) {
+  .md-toc-h3 .md-toc-inner { margin-left: 3.5em; }
+  .md-toc-h4 .md-toc-inner { margin-left: 5em; }
+  .md-toc-h5 .md-toc-inner { margin-left: 6.5em; }
+  .md-toc-h6 .md-toc-inner { margin-left: 8em; }
+}
+a.md-toc-inner { font-size: inherit; font-style: inherit; font-weight: inherit; line-height: inherit; }
+.footnote-line a:not(.reversefootnote) { color: inherit; }
+.md-attr { display: none; }
+.md-fn-count::after { content: "."; }
+code, pre, samp, tt { font-family: var(--monospace); }
+kbd { margin: 0px 0.1em; padding: 0.1em 0.6em; font-size: 0.8em; color: rgb(36, 39, 41); background: rgb(255, 255, 255); border: 1px solid rgb(173, 179, 185); border-radius: 3px; box-shadow: rgba(12, 13, 14, 0.2) 0px 1px 0px, rgb(255, 255, 255) 0px 0px 0px 2px inset; white-space: nowrap; vertical-align: middle; }
+.md-comment { color: rgb(162, 127, 3); opacity: 0.8; font-family: var(--monospace); }
+code { text-align: left; vertical-align: initial; }
+a.md-print-anchor { white-space: pre !important; border-width: initial !important; border-style: none !important; border-color: initial !important; display: inline-block !important; position: absolute !important; width: 1px !important; right: 0px !important; outline: 0px !important; background: 0px 0px !important; text-decoration: initial !important; text-shadow: initial !important; }
+.md-inline-math .MathJax_SVG .noError { display: none !important; }
+.html-for-mac .inline-math-svg .MathJax_SVG { vertical-align: 0.2px; }
+.md-math-block .MathJax_SVG_Display { text-align: center; margin: 0px; position: relative; text-indent: 0px; max-width: none; max-height: none; min-height: 0px; min-width: 100%; width: auto; overflow-y: hidden; display: block !important; }
+.MathJax_SVG_Display, .md-inline-math .MathJax_SVG_Display { width: auto; margin: inherit; display: inline-block !important; }
+.MathJax_SVG .MJX-monospace { font-family: var(--monospace); }
+.MathJax_SVG .MJX-sans-serif { font-family: sans-serif; }
+.MathJax_SVG { display: inline; font-style: normal; font-weight: 400; line-height: normal; zoom: 90%; text-indent: 0px; text-align: left; text-transform: none; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; direction: ltr; max-width: none; max-height: none; min-width: 0px; min-height: 0px; border: 0px; padding: 0px; margin: 0px; }
+.MathJax_SVG * { transition: none; }
+.MathJax_SVG_Display svg { vertical-align: middle !important; margin-bottom: 0px !important; }
+.os-windows.monocolor-emoji .md-emoji { font-family: "Segoe UI Symbol", sans-serif; }
+.md-diagram-panel > svg { max-width: 100%; }
+[lang="mermaid"] svg, [lang="flow"] svg { max-width: 100%; }
+[lang="mermaid"] .node text { font-size: 1rem; }
+table tr th { border-bottom: 0px; }
+video { max-width: 100%; display: block; margin: 0px auto; }
+iframe { max-width: 100%; width: 100%; border: none; }
+.highlight td, .highlight tr { border: 0px; }
 
-   <!--- Basic Page Needs
-   ================================================== -->
-   <meta charset="utf-8">
-	<title>钟某人的主页</title>
-	<meta name="description" content="钟伟东的个人主页，记录鄙人的教育经历、项目经历、工作经历等等">
-	<meta name="author" content="tmn07">
-   <meta name="keyword" content="钟伟东,Tmn07,主页">
-   <!-- Mobile Specific Metas
-   ================================================== -->
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-	<!-- CSS
-    ================================================== -->
-   <link rel="stylesheet" href="css/default.css">
-	<link rel="stylesheet" href="css/layout.css">
-   <link rel="stylesheet" href="css/media-queries.css">
-   <link rel="stylesheet" href="css/magnific-popup.css">
+html { font-size: 19px; }
+html, body { margin: auto; background: rgb(254, 254, 254); }
+body { font-family: Vollkorn, Palatino, Times; color: rgb(51, 51, 51); line-height: 1.4; text-align: justify; }
+#write { max-width: 960px; margin: 0px auto 2em; line-height: 1.53; padding-top: 40px; }
+#write > h1:first-child, h1 { margin-top: 1.6em; font-weight: normal; }
+h1 { font-size: 3em; }
+h2 { margin-top: 2em; font-weight: normal; }
+h3 { font-weight: normal; font-style: italic; margin-top: 3em; }
+h1, h2, h3 { text-align: center; }
+h2::after { border-bottom: 1px solid rgb(47, 47, 47); content: ""; width: 100px; display: block; margin: 0px auto; height: 1px; }
+h1 + h2, h2 + h3 { margin-top: 0.83em; }
+p, .mathjax-block { margin-top: 0px; }
+ul { list-style: square; padding-left: 1.2em; }
+ol { padding-left: 1.2em; }
+blockquote { margin-left: 1em; padding-left: 1em; border-left: 1px solid rgb(221, 221, 221); }
+code, pre { font-family: Consolas, Menlo, Monaco, monospace, serif; font-size: 0.9em; background: white; }
+.md-fences { margin-left: 1em; padding-left: 1em; border: 1px solid rgb(221, 221, 221); padding-bottom: 8px; padding-top: 6px; margin-bottom: 1.5em; }
+a { color: rgb(36, 132, 193); text-decoration: none; }
+a:hover { text-decoration: underline; }
+a img { border: none; }
+h1 a, h1 a:hover { color: rgb(51, 51, 51); text-decoration: none; }
+hr { color: rgb(221, 221, 221); height: 1px; margin: 2em 0px; border-top: 1px solid rgb(221, 221, 221); border-bottom: none; border-left: 0px; border-right: 0px; }
+.ty-table-edit { background: rgb(237, 237, 237); padding-top: 4px; }
+table { margin-bottom: 1.33333rem; }
+table th, table td { padding: 8px; line-height: 1.33333rem; vertical-align: top; border-top: 1px solid rgb(221, 221, 221); }
+table th { font-weight: bold; }
+table thead th { vertical-align: bottom; }
+table caption + thead tr:first-child th, table caption + thead tr:first-child td, table colgroup + thead tr:first-child th, table colgroup + thead tr:first-child td, table thead:first-child tr:first-child th, table thead:first-child tr:first-child td { border-top: 0px; }
+table tbody + tbody { border-top: 2px solid rgb(221, 221, 221); }
+.task-list { padding: 0px; }
+.md-task-list-item { padding-left: 1.6rem; }
+.md-task-list-item > input::before { content: "√"; display: inline-block; width: 1.33333rem; height: 1.6rem; vertical-align: middle; text-align: center; color: rgb(221, 221, 221); background-color: rgb(254, 254, 254); }
+.md-task-list-item > input:checked::before, .md-task-list-item > input[checked]::before { color: inherit; }
+.md-tag { color: inherit; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; font-size: inherit; line-height: inherit; font-family: inherit; }
+#write pre.md-meta-block { min-height: 35px; padding: 0.5em 1em; }
+#write pre.md-meta-block { white-space: pre; background: rgb(248, 248, 248); border-width: 0px 30px; border-top-style: initial; border-bottom-style: initial; border-top-color: initial; border-bottom-color: initial; border-image: initial; color: rgb(153, 153, 153); width: 100vw; max-width: calc(100% + 60px); margin-left: -30px; border-left-style: solid; border-left-color: rgb(248, 248, 248); border-right-style: solid; border-right-color: rgb(248, 248, 248); margin-bottom: 2em; margin-top: -1.33333rem; padding-top: 26px; padding-bottom: 10px; line-height: 1.8em; font-size: 0.76em; padding-left: 0px; }
+.md-img-error.md-image > .md-meta { vertical-align: bottom; }
+#write > h5.md-focus::before { top: 2px; }
+.md-toc { margin-top: 40px; }
+.md-toc-content { padding-bottom: 20px; }
+.outline-expander::before { color: inherit; font-size: 14px; top: auto; content: ""; font-family: FontAwesome; }
+.outline-expander:hover::before, .outline-item-open > .outline-item > .outline-expander::before { content: ""; }
+#typora-source { font-family: Courier, monospace; color: rgb(106, 106, 106); }
+.html-for-mac #typora-sidebar { box-shadow: rgba(0, 0, 0, 0.176) 0px 6px 12px; }
+.cm-s-typora-default .cm-header, .cm-s-typora-default .cm-property, .CodeMirror.cm-s-typora-default div.CodeMirror-cursor { color: rgb(66, 139, 202); }
+.cm-s-typora-default .cm-atom, .cm-s-typora-default .cm-number { color: rgb(119, 119, 119); }
+.typora-node .file-list-item-parent-loc, .typora-node .file-list-item-time, .typora-node .file-list-item-summary { font-family: arial, sans-serif; }
+.md-task-list-item > input { margin-left: -1.3em; margin-top: calc(1rem - 12px); }
+.md-mathjax-midline { background: rgb(250, 250, 250); }
+.md-fences .code-tooltip { bottom: -2em !important; }
+.dropdown-menu .divider { border-color: rgb(229, 229, 229); }
 
-   <!-- Script
-   ================================================== -->
-	<script src="js/modernizr.js"></script>
 
-   <!-- Favicons
-	================================================== -->
-	<link rel="shortcut icon" href="favicon.png" >
 
-   <script type="text/javascript">
-       var _mfq = _mfq || [];
-       (function() {
-           var mf = document.createElement("script");
-           mf.type = "text/javascript"; mf.async = true;
-           mf.src = "//cdn.mouseflow.com/projects/687496a6-c645-4258-9f4a-38049b3264c5.js";
-           document.getElementsByTagName("head")[0].appendChild(mf);
-       })();
-   </script>
-   
+
+
+ .typora-export li, .typora-export p, .typora-export,  .footnote-line {white-space: normal;} 
+</style>
 </head>
-
-<body>
-
-   <!-- Header
-   ================================================== -->
-   <header id="home">
-
-      <nav id="nav-wrap">
-
-         <a class="mobile-btn" href="#nav-wrap" title="Show navigation">Show navigation</a>
-	      <a class="mobile-btn" href="#" title="Hide navigation">Hide navigation</a>
-
-         <ul id="nav" class="nav">
-            <li class="current"><a class="smoothscroll" href="#home">Home</a></li>
-            <li><a class="smoothscroll" href="#about">About</a></li>
-	         <li><a class="smoothscroll" href="#resume">Resume</a></li>
-            <li><a class="smoothscroll" href="#portfolio">Works</a></li>
-            <li><a class="smoothscroll" href="#testimonials">Testimonials</a></li>
-            <li><a class="smoothscroll" href="#contact">Contact</a></li>
-         </ul> <!-- end #nav -->
-
-      </nav> <!-- end #nav-wrap -->
-
-      <div class="row banner">
-         <div class="banner-text">
-            <h1 class="responsive-headline">I'm Tmn07.</h1>
-            <h3>在校大学生一枚，曾致力于成为 <span>PHP后端工程师</span>, <span>语音识别工程师</span> & <span>生物信息工程师</span>。不玩游戏，只搞技术23333. 现在开始 <a class="smoothscroll" href="#about">滑动</a>
-            了解更多 <a class="smoothscroll" href="#about">关于我</a>.</h3>
-            <hr />
-            <ul class="social">
-               <li><a href="http://user.qzone.qq.com/519043202/" target="_blank"><i class="fa fa-qq"></i></a></li>
-               <li><a href="http://www.weibo.com/u/5167364556" target="_blank"><i class="fa fa-weibo"></i></a></li>
-               <li><a href="http://github.com/qq519043202"><i class="fa fa-github"></i></a></li>
-               <li><a href="https://plus.google.com/u/0/117722988912181569824/posts" target="_blank"><i class="fa fa-google-plus"></i></a></li>
-               <li><a href="https://bitbucket.org/qq519043202/" target="_blank"><i class="fa fa-bitbucket"></i></a></li>
-            </ul>
-         </div>
-      </div>
-
-      <p class="scrolldown">
-         <a class="smoothscroll" href="#about"><i class="icon-down-circle"></i></a>
-      </p>
-
-   </header> <!-- Header End -->
-
-
-   <!-- About Section
-   ================================================== -->
-   <section id="about">
-
-      <div class="row">
-
-         <div class="three columns">
-
-            <img class="profile-pic"  src="images/profilepic.png" alt="" />
-
-         </div>
-
-         <div class="nine columns main-col">
-
-            <h2>姓名：钟伟东</h2>
-
-            <p>&nbsp&nbsp&nbsp&nbsp
-            福建男，热爱学习，喜欢搞技术。热爱生活，无不良癖好。爱好多种运动，尤其是排球。<br>&nbsp&nbsp&nbsp&nbsp
-            哈尔滨某工业大学在读大学生，成绩还行，技术还行。<br>
-            &nbsp&nbsp&nbsp&nbsp
-            最早开始学技术的时候，是由于pureweber社团的培训，后来看到了BILIBILI的招聘有收PHP的，就入了PHP的坑，怎么说，水平有限，而且考虑读研，Web只能是做着玩玩，一路上很开心，也算是从中得到了第一份“正式”的工作了。<br>
-            &nbsp&nbsp&nbsp&nbsp
-            后来开始接触机器学习，先是刷了coursera上NG的机器学习课，掌握得还行，不过缺少实践，大部分时间都在做Web开发，这一块的学习尚浅，不过还是很有兴趣的，从今准备在这一块加紧学习。
-            </p>
-
-            <div class="row">
-
-               <div class="columns contact-details">
-
-                  <h2>约会方式</h2>
-                  <p class="address">
-                    <span>电话联系：18245024226</span><br>
-                    <span>邮件邀约：tmn0796@gmail.com</span><br>
-                    <span>上来就要QQ：519043202</span>
-                  </p>
-
-               </div>
-
-               <div class="columns download">
-                  <p>
-                     <a href="cv.pdf" target="_blank" class="button"><i class="fa fa-download"></i>查 看 简 历（待更新）</a>
-                  </p>
-               </div>
-
-            </div> <!-- end row -->
-
-         </div> <!-- end .main-col -->
-
-      </div>
-
-   </section> <!-- About Section End-->
-
-
-   <!-- Resume Section
-   ================================================== -->
-   <section id="resume">
-
-      <div class="row education">
-
-         <div class="three columns header-col">
-            <h1><span>Education</span></h1>
-         </div>
-
-         <div class="nine columns main-col">
-
-            <div class="row item">
-
-               <div class="twelve columns">
-
-                  <h3>哈尔滨工业大学</h3>
-                  <p class="info">生物信息学-本科 <span>&bull;</span> <em class="date">September 2014</em></p>
-
-                  <p>
-                     就读期间，获得国奖奖学金，光华奖学金，校三好学生，多次一等人民奖学金等等。三个学期成绩专业第一，目前为综合学分绩排名第一（1/15）。
-                  </p>
-
-               </div>
-
-            </div> <!-- item end -->
-
-            <div class="row item">
-
-               <div class="twelve columns">
-
-                  <h3>北京大学</h3>
-                  <p class="info">暑期学校交流生 <span>&bull;</span> <em class="date">July 2016</em></p>
-
-                  <p>
-                     正式选课的有生物特征识别与用户体验技术研究，还蹭了点互联网运营管理，ACM培训。第一门课是由窝工感知计算中心大Boss张大鹏教的（得分81），第二门课由一个很逗很可爱的何吉波老师带的（得分96）。
-                  </p>
-
-               </div>
-
-            </div> <!-- item end -->
-
-         </div> <!-- main-col end -->
-
-      </div> <!-- End Education -->
-
-      <div class="row education">
-
-         <div class="three columns header-col">
-            <h1><span>Activity</span></h1>
-         </div>
-
-         <div class="nine columns main-col">
-
-            <div class="row item">
-
-               <div class="twelve columns">
-
-                  <h3>社团经历</h3>
-                  <p>
-                     校级社团——极客学院俱乐部创始人之一兼副主席，组织辅导学弟妹项目学习<br>
-                     腾讯创新俱乐部成员，负责微信运营开发，参与举办过有一定规模的讲座<br>
-                     计算机学院青协成员，组织参与多次夕阳 E 时代志愿活动<br>
-                  </p>
-
-               </div>
-
-            </div> <!-- item end -->
-
-            <div class="row item">
-
-               <div class="twelve columns">
-
-                  <h3>比赛经历</h3>
-                  <p>
-                     第九届全国大学生网络商务创新应用大赛，省级三等奖<br>
-                     “互联网+”大学生创新创业大赛校赛，校级二等奖<br>
-                     哈工大微软校园Hackathon，北京大学HackPKU酱油选手<br>
-                  </p>
-
-               </div>
-
-            </div> <!-- item end -->
-            <div class="row item">
-
-               <div class="twelve columns">
-
-                  <h3>社会实践</h3>
-                  <p>
-                     2016年寒假，回母校福清一中进行招生宣传，效果良好<br>
-                     长期参与，夕阳E时代的活动，教到老年人使用电子产品<br>
-                  </p>
-
-               </div>
-
-            </div> <!-- item end -->
-         </div> <!-- main-col end -->
-
-      </div> <!-- End Education -->
-
-      <!-- Work
-      ----------------------------------------------- -->
-      <div class="row work">
-
-         <div class="three columns header-col">
-            <h1><span>Work</span></h1>
-         </div>
-
-         <div class="nine columns main-col">
-
-            <div class="row item">
-
-               <div class="twelve columns">
-
-                  <h3><a href="http://120.27.95.107/PublicOpinionAnalysis/" target="_blank">舆情分析项目</a></h3>
-                  <p class="info">后端开发 <span>&bull;</span> <em class="date">October 2015 - May 2016</em></p>
-
-                  <p>
-                     项目为某研究生毕业设计，依托于校团委，由我们三人核心团队开发，还有一堆助攻的学长。使用ThinkPHP框架，整个项目大体由甲方提出，整体业务逻辑及M层，C层的工作主要我是设计开发的。项目主要是各种的数据处理，查询，展示。利用获取、爬取的信息，进行分词、情感分析，使用jieba分词，ltp语言云，LDA主题模型提取算法等方式实现。
-                  </p>
-
-               </div>
-
-            </div> <!-- item end -->
-
-            <div class="row item">
-
-               <div class="twelve columns">
-
-                  <h3><a href="http://gxxnr.cn/" target="_blank">新农人电商系统</a></h3>
-                  <p class="info">后端开发兼技术团队负责人 <span>&bull;</span> <em class="date">March 2015 - Present</em></p>
-
-                  <p>
-                     项目由黑龙江省供销社发起，哈工大XXXX实验室承办。主要内容是ECShop二次开发。这是一个B2C商城系统，要求我们开发成B2B2C系统。被任命为开发团队（5个大二学生）的负责人，负责分工，与甲方沟通，主导例会。开发方面，目前在开发商户管理后台，利用环信云开发即时通讯等。作为团队里较为技能全面的，经常需要到处修修补补满足甲方要求。
-                  </p>
-
-               </div>
-
-            </div> <!-- item end -->
-
-         </div> <!-- main-col end -->
-
-      </div> <!-- End Work -->
-
-
-      <!-- Skills -->
-      <div class="row skill">
-
-         <div class="three columns header-col">
-            <h1><span>Skills</span></h1>
-         </div>
-
-         <div class="nine columns main-col">
-
-            <p>技能树乱点，暂且没有精通的。<br>
-            Web后端语言主要用的PHP。长期使用Python来写东西。C系的不经常写，意识模糊流。<br>
-            前端的技能比较残缺，HTML+CSS基本忘光，不过的确没有深入学过。比起Js，更趋向于使用jQuery，node属于hello,world级别。<br>
-            数据库方面，对MySQL，Mongodb有接触。服务器方面，在阿里云上各种乱整，各种端口跑各种服务。0级运维水平2333<br>
-            未来可能深入接触机器学习吧。以下百分值瞎写的~
-            </p>
-
-        <div class="bars">
-
-           <ul class="skills">
-             <li><span class="bar-expand Python"></span><em>Python</em></li>
-                  <li><span class="bar-expand PHP"></span><em>PHP</em></li>
-            <li><span class="bar-expand MySQL"></span><em>MySQL</em></li>
-            <li><span class="bar-expand jquery"></span><em>jQuery</em></li>
-                  <li><span class="bar-expand ml"></span><em>Machine Learing</em></li>
-          </ul>
-
-        </div><!-- end skill-bars -->
-
-      </div> <!-- main-col end -->
-
-      </div> <!-- End skills -->
-
-   </section> <!-- Resume Section End-->
-
-
-   <!-- Portfolio Section
-   ================================================== -->
-   <section id="portfolio">
-
-      <div class="row">
-
-         <div class="twelve columns collapsed">
-
-            <h1>Check Out Some of My Works.</h1>
-
-            <!-- portfolio-wrapper -->
-            <div id="portfolio-wrapper" class="bgrid-quarters s-bgrid-thirds cf">
-
-               <div class="columns portfolio-item">
-                  <div class="item-wrap">
-
-                     <a href="#modal-01" title="">
-                        <img alt="" src="images/portfolio/POA.png">
-                        <div class="overlay">
-                           <div class="portfolio-item-meta">
-                          <h5>POA</h5>
-                              <p>校园舆情分析项目</p>
-                       </div>
-                        </div>
-                        <div class="link-icon"><i class="icon-plus"></i></div>
-                     </a>
-
-                  </div>
-              </div> <!-- item end -->
-
-               <div class="columns portfolio-item">
-                  <div class="item-wrap">
-
-                     <a href="#modal-02" title="">
-                        <img alt="" src="images/portfolio/gxxnr.png">
-                        <div class="overlay">
-                           <div class="portfolio-item-meta">
-                          <h5>gxxnr.cn</h5>
-                              <p>供销新农人电子商城</p>
-                       </div>
-                        </div>
-                        <div class="link-icon"><i class="icon-plus"></i></div>
-                     </a>
-
-                  </div>
-              </div> <!-- item end -->
-
-               <div class="columns portfolio-item">
-                  <div class="item-wrap">
-
-                     <a href="#modal-03" title="">
-                        <img alt="" src="images/portfolio/PMS.png">
-                        <div class="overlay">
-                           <div class="portfolio-item-meta">
-                          <h5>星图</h5>
-                              <p>照片存储、分享、美化等</p>
-                       </div>
-                        </div>
-                        <div class="link-icon"><i class="icon-plus"></i></div>
-                     </a>
-
-                  </div>
-              </div> <!-- item end -->
-
-               <div class="columns portfolio-item">
-                  <div class="item-wrap">
-
-                     <a href="#modal-04" title="">
-                        <img alt="" src="images/portfolio/pure.jpg">
-                        <div class="overlay">
-                           <div class="portfolio-item-meta">
-                          <h5>Pureweber 官网</h5>
-                              <p>博客， 直播</p>
-                       </div>
-                        </div>
-                        <div class="link-icon"><i class="icon-plus"></i></div>
-                     </a>
-
-                  </div>
-              </div> <!-- item end -->
-
-               <div class="columns portfolio-item">
-                  <div class="item-wrap">
-
-                     <a href="#modal-05" title="">
-                        <img alt="" src="images/portfolio/bili.jpg">
-                        <div class="overlay">
-                           <div class="portfolio-item-meta">
-                          <h5>B站各种爬虫</h5>
-                              <p>弹幕，签到，抢楼等爬虫</p>
-                       </div>
-                        </div>
-                        <div class="link-icon"><i class="icon-plus"></i></div>
-                     </a>
-
-                  </div>
-              </div> <!-- item end -->
-
-               <div class="columns portfolio-item">
-                  <div class="item-wrap">
-
-                     <a href="#modal-06" title="">
-                        <img alt="" src="images/portfolio/who.png">
-                        <div class="overlay">
-                           <div class="portfolio-item-meta">
-                          <h5>谁组的暗牧</h5>
-                              <p>Game</p>
-                       </div>
-                        </div>
-                        <div class="link-icon"><i class="icon-plus"></i></div>
-                     </a>
-
-                  </div>
-              </div> <!-- item end -->
-
-               <div class="columns portfolio-item">
-                  <div class="item-wrap">
-
-                     <a href="#modal-07" title="">
-                        <img alt="" src="images/portfolio/vr.png">
-                        <div class="overlay">
-                           <div class="portfolio-item-meta">
-                          <h5>VRsic</h5>
-                              <p>VR音乐节奏游戏</p>
-                       </div>
-                        </div>
-                        <div class="link-icon"><i class="icon-plus"></i></div>
-                     </a>
-
-                  </div>
-              </div> <!-- item end -->
-
-               <div class="columns portfolio-item">
-                  <div class="item-wrap">
-
-                     <a href="#modal-08" title="">
-                        <img alt="" src="images/portfolio/blog.png">
-                        <div class="overlay">
-                           <div class="portfolio-item-meta">
-                          <h5>Tmn07's blog</h5>
-                              <p>个人博客</p>
-                       </div>
-                        </div>
-                        <div class="link-icon"><i class="icon-plus"></i></div>
-                     </a>
-
-                  </div>
-              </div>  <!-- item end -->
-
-            </div> <!-- portfolio-wrapper end -->
-
-         </div> <!-- twelve columns end -->
-
-
-         <!-- Modal Popup -->
-
-         <div id="modal-01" class="popup-modal mfp-hide">
-
-          <img class="scale-with-grid" src="images/portfolio/modals/m-POA.png" alt="" />
-
-          <div class="description-box">
-            <h4>校园舆情分析系统</h4>
-            <p>利用爬虫获取微博，知乎相关数据。进行自然语言处理，并做出可视化分析结果。同时提供在线微博情感分析功能。</p>
-               <span class="categories"><i class="fa fa-tag"></i>PHP Backend</span>
-          </div>
-
-            <div class="link-box">
-               <a href="http://120.27.95.107/PublicOpinionAnalysis/">Link to</a>
-             <a class="popup-modal-dismiss">Close</a>
-            </div>
-
-        </div><!-- modal-01 End -->
-
-         <div id="modal-02" class="popup-modal mfp-hide">
-
-          <img class="scale-with-grid" src="images/portfolio/modals/m-gxxnr.png" alt="" />
-
-          <div class="description-box">
-            <h4>供销新农人电子商务平台</h4>
-            <p>利用原生ecshop做二次开发，打造出黑龙江省供销社的B2B2C平台。</p>
-               <span class="categories"><i class="fa fa-tag"></i>Leader,PHP Backend</span>
-          </div>
-
-            <div class="link-box">
-               <a href="http://gxxnr.cn">Link to</a>
-             <a class="popup-modal-dismiss">Close</a>
-            </div>
-
-        </div><!-- modal-02 End -->
-
-         <div id="modal-03" class="popup-modal mfp-hide">
-
-          <img class="scale-with-grid" src="images/portfolio/modals/m-PMS.png" alt="" />
-
-          <div class="description-box">
-            <h4>星图照片管理系统</h4>
-            <p>照片云端存储，分享评论，双边模糊美化算法，地理信息可视化展示</p>
-               <span class="categories"><i class="fa fa-tag"></i>PHP Backend, opencv</span>
-          </div>
-
-            <div class="link-box">
-               <a href="http://tmn07.cn/PMS" target="_blank">Link to</a>
-             <a class="popup-modal-dismiss">Close</a>
-            </div>
-
-        </div><!-- modal-03 End -->
-
-         <div id="modal-04" class="popup-modal mfp-hide">
-
-          <img class="scale-with-grid" src="images/portfolio/modals/m-intothelight.jpg" alt="" />
-
-          <div class="description-box">
-            <h4>Pureweber 官网</h4>
-            <p>俱乐部博客平台，分享会直播平台。前端React + material ui，后端nodejs的express框架，nginx-rtmp实现直播功能</p>
-               <span class="categories"><i class="fa fa-tag"></i>Live technology, node Backend</span>
-          </div>
-
-            <div class="link-box">
-               <a href="http://www.behance.net">Link to</a>
-             <a class="popup-modal-dismiss">Close</a>
-            </div>
-
-        </div><!-- modal-04 End -->
-
-         <div id="modal-05" class="popup-modal mfp-hide">
-
-          <img class="scale-with-grid" src="images/portfolio/modals/m-bili.png" alt="" />
-
-          <div class="description-box">
-            <h4>B站各种爬虫</h4>
-            <p>个人目前在github上获得最多star的项目。用python写的爬虫，一开始是用urllib，然后是requests，现在又用上了线程池。<br \>功能：获取视频弹幕信息，评论区抢特定楼层，自动每天签到。
-            <br \>详细说明请进入source 内查看</p>
-               <span class="categories"><i class="fa fa-tag"></i>Python Spider</span>
-          </div>
-
-            <div class="link-box">
-               <a href="https://github.com/qq519043202/BILI" target="_blank">Source</a>
-             <a class="popup-modal-dismiss">Close</a>
-            </div>
-
-        </div><!-- modal-05 End -->
-
-         <div id="modal-06" class="popup-modal mfp-hide">
-
-          <img class="scale-with-grid" src="images/portfolio/modals/m-who.png" alt="" />
-
-          <div class="description-box">
-            <h4>谁组的暗牧</h4>
-            <p>爬虫获取每周pixiv上排行榜的图片，更新游戏图片存储。
-            <br />JavaScript crafty库完成游戏主要Canvas。</p>
-               <span class="categories"><i class="fa fa-tag"></i>JavaScript ,Python</span>
-          </div>
-
-            <div class="link-box">
-               <a href="http://tmn07.cn/Who-set-the-sp/" target="_blank">Link to</a>
-               <a style="margin-left: 24px;" href="https://github.com/tmn07-lj/Who-set-the-sp" target="_blank">Source</a>
-             <a class="popup-modal-dismiss">Close</a>
-            </div>
-
-        </div><!-- modal-06 End -->
-
-         <div id="modal-07" class="popup-modal mfp-hide">
-
-          <img class="scale-with-grid" src="images/portfolio/modals/m-vr.jpg" alt="" />
-
-          <div class="description-box">
-            <h4>VR音乐节奏游戏</h4>
-            <p>利用aframe框架制作。尚且粗糙，功能基本实现。<br \>录制音乐节拍，目前是利用otg外接键盘打击判定得分。原本设想是利用语音识别，来做为打击判定。</p>
-               <span class="categories"><i class="fa fa-tag"></i>JavaScript VR</span>
-          </div>
-
-            <div class="link-box">
-               <a href="http://tmn07.com/VR-practices/" target="_blank">Link to</a>
-               <a style="margin-left: 24px;" href="https://github.com/qq519043202/VR-practices" target="_blank">Source</a>
-             <a class="popup-modal-dismiss">Close</a>
-            </div>
-
-        </div><!-- modal-07 End -->
-
-         <div id="modal-08" class="popup-modal mfp-hide">
-
-          <img class="scale-with-grid" src="images/portfolio/modals/m-blog.png" alt="" />
-
-          <div class="description-box">
-            <h4>个人博客</h4>
-            <p>利用hexo搭建博客，记录部分心得体验</p>
-          </div>
-
-            <div class="link-box">
-               <a href="http://tmn07.com/hexo/archives/" target="_blank">Details</a>
-             <a class="popup-modal-dismiss">Close</a>
-            </div>
-
-        </div><!-- modal-01 End -->
-
-
-      </div> <!-- row End -->
-
-   </section> <!-- Portfolio Section End-->
-
-
-
-   <!-- Testimonials Section
-   ================================================== -->
-   <section id="testimonials">
-
-      <div class="text-container">
-
-         <div class="row">
-
-            <div class="two columns header-col">
-
-               <h1><span>Client Testimonials</span></h1>
-
-            </div>
-
-            <div class="ten columns flex-container">
-
-               <div class="flexslider">
-
-                  <ul class="slides">
-
-                     <li>
-                        <blockquote>
-                           <p>Your work is going to fill a large part of your life, and the only way to be truly satisfied is
-                           to do what you believe is great work. And the only way to do great work is to love what you do.
-                           If you haven't found it yet, keep looking. Don't settle. As with all matters of the heart, you'll know when you find it.
-                           </p>
-                           <cite>Steve Jobs</cite>
-                        </blockquote>
-                     </li> <!-- slide ends -->
-
-                     <li>
-                        <blockquote>
-                           <p>This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet.
-                           Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem
-                           nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris.
-                           </p>
-                           <cite>Mr. Adobe</cite>
-                        </blockquote>
-                     </li> <!-- slide ends -->
-
-                  </ul>
-
-               </div> <!-- div.flexslider ends -->
-
-            </div> <!-- div.flex-container ends -->
-
-         </div> <!-- row ends -->
-
-       </div>  <!-- text-container ends -->
-
-   </section> <!-- Testimonials Section End-->
-
-   <!-- footer
-   ================================================== -->
-   <footer>
-
-      <div class="row">
-
-         <div class="twelve columns">
-
-            <ul class="copyright">
-               <li>&copy; 2016 tmn07@hit.edu.cn </li>
-            </ul>
-
-         </div>
-
-         <div id="go-top"><a class="smoothscroll" title="Back to Top" href="#home"><i class="icon-up-open"></i></a></div>
-
-      </div>
-
-   </footer> <!-- Footer End-->
-
-   <!-- Java Script
-   ================================================== -->
-   <script src="js/jquery.min.js"></script>
-   <script>window.jQuery || document.write('<script src="js/jquery-1.10.2.min.js"><\/script>')</script>
-   <script type="text/javascript" src="js/jquery-migrate-1.2.1.min.js"></script>
-
-   <script src="js/jquery.flexslider.js"></script>
-   <script src="js/waypoints.js"></script>
-   <script src="js/jquery.fittext.js"></script>
-   <script src="js/magnific-popup.js"></script>
-   <script src="js/init.js"></script>
-
+<body class='typora-export os-windows' >
+<div  id='write'  class = 'is-node'><h1><a name='header-n0' class='md-header-anchor '></a>Tmn07P 的网站</h1><p>昵称全名Tmn07，大家叫07就可以了（也都是网上，现实中还没被这么叫过233</p><p>这个tmn07.com的域名应该会一直续下去，现在就放一下刚刚做的名片初稿吧</p><p>（话说，有人在名片又缺德又DD的吗，太草了（</p><p><img src='./0.png' alt='' referrerPolicy='no-referrer' /></p><p><img src='./1.png' alt='' referrerPolicy='no-referrer' /></p></div>
 </body>
-
 </html>
