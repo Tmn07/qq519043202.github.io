@@ -4,12 +4,12 @@
 <meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
 <title>README</title><link href='https://fonts.loli.net/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext' rel='stylesheet' type='text/css' /><style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color:#ffffff; --text-color:#333333; --select-text-bg-color:#B5D6FC; --select-text-font-color:auto; --monospace:"Lucida Console",Consolas,"Courier",monospace; }
 html { font-size: 14px; background-color: var(--bg-color); color: var(--text-color); font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
-body { margin: 0px; padding: 0px; height: auto; bottom: 0px; top: 0px; left: 0px; right: 0px; font-size: 1rem; line-height: 1.42857; overflow-x: hidden; background: inherit; tab-size: 4; }
+body { margin: 0px; padding: 0px; height: auto; bottom: 0px; top: 0px; left: 0px; right: 0px; font-size: 1rem; line-height: 1.42857; overflow-x: hidden; background: inherit; }
 iframe { margin: auto; }
 a.url { word-break: break-all; }
 a:active, a:hover { outline: 0px; }
 .in-text-selection, ::selection { text-shadow: none; background: var(--select-text-bg-color); color: var(--select-text-font-color); }
-#write { margin: 0px auto; height: auto; width: inherit; word-break: normal; overflow-wrap: break-word; position: relative; white-space: normal; overflow-x: visible; padding-top: 40px; }
+#write { margin: 0px auto; height: auto; width: inherit; word-break: normal; word-wrap: break-word; position: relative; white-space: normal; overflow-x: visible; padding-top: 40px; }
 #write.first-line-indent p { text-indent: 2em; }
 #write.first-line-indent li p, #write.first-line-indent p * { text-indent: 0px; }
 #write.first-line-indent li { margin-left: 2em; }
@@ -18,19 +18,17 @@ body.typora-export { padding-left: 30px; padding-right: 30px; }
 .typora-export .footnote-line, .typora-export li, .typora-export p { white-space: pre-wrap; }
 @media screen and (max-width: 500px) {
   body.typora-export { padding-left: 0px; padding-right: 0px; }
-  #write { padding-left: 20px; padding-right: 20px; }
   .CodeMirror-sizer { margin-left: 0px !important; }
   .CodeMirror-gutters { display: none !important; }
 }
-#write li > figure:last-child { margin-bottom: 0.5rem; }
+#write li > figure:first-child { margin-top: -20px; }
 #write ol, #write ul { position: relative; }
 img { max-width: 100%; vertical-align: middle; }
-button, input, select, textarea { color: inherit; font: inherit; }
+button, input, select, textarea { color: inherit; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; font-size: inherit; line-height: inherit; font-family: inherit; }
 input[type="checkbox"], input[type="radio"] { line-height: normal; padding: 0px; }
 *, ::after, ::before { box-sizing: border-box; }
 #write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p, #write pre { width: inherit; }
 #write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p { position: relative; }
-p { line-height: inherit; }
 h1, h2, h3, h4, h5, h6 { break-after: avoid-page; break-inside: avoid; orphans: 2; }
 p { orphans: 4; }
 h1 { font-size: 2rem; }
@@ -53,7 +51,6 @@ thead { display: table-header-group; }
 table { border-collapse: collapse; border-spacing: 0px; width: 100%; overflow: auto; break-inside: auto; text-align: left; }
 table.md-table td { min-width: 32px; }
 .CodeMirror-gutters { border-right: 0px; background-color: inherit; }
-.CodeMirror-linenumber { user-select: none; }
 .CodeMirror { text-align: left; }
 .CodeMirror-placeholder { opacity: 0.3; }
 .CodeMirror pre { padding: 0px 4px; }
@@ -88,6 +85,7 @@ blockquote > :first-child, li > :first-child { margin-top: 0px; }
   html.blink-to-pdf { font-size: 13px; }
   .typora-export #write { padding-left: 32px; padding-right: 32px; padding-bottom: 0px; break-after: avoid; }
   .typora-export #write::after { height: 0px; }
+  @page { margin: 20mm 0px; }
 }
 .footnote-line { margin-top: 0.714em; font-size: 0.7em; }
 a img, img a { cursor: pointer; }
@@ -100,7 +98,7 @@ p > .md-image:only-child { display: inline-block; width: 100%; }
 [contenteditable="true"]:active, [contenteditable="true"]:focus { outline: 0px; box-shadow: none; }
 .md-task-list-item { position: relative; list-style-type: none; }
 .task-list-item.md-task-list-item { padding-left: 0px; }
-.md-task-list-item > input { position: absolute; top: 0px; left: 0px; margin-left: -1.2em; margin-top: calc(1em - 10px); border: none; }
+.md-task-list-item > input { position: absolute; top: 0px; left: 0px; margin-left: -1.2em; margin-top: calc(1em - 10px); }
 .math { font-size: 1rem; }
 .md-toc { min-height: 3.58rem; position: relative; font-size: 0.9rem; border-radius: 10px; }
 .md-toc-content { position: relative; margin-left: 0px; }
@@ -136,12 +134,12 @@ a.md-print-anchor { white-space: pre !important; border-width: initial !importan
 .MathJax_SVG_Display, .md-inline-math .MathJax_SVG_Display { width: auto; margin: inherit; display: inline-block !important; }
 .MathJax_SVG .MJX-monospace { font-family: var(--monospace); }
 .MathJax_SVG .MJX-sans-serif { font-family: sans-serif; }
-.MathJax_SVG { display: inline; font-style: normal; font-weight: 400; line-height: normal; zoom: 90%; text-indent: 0px; text-align: left; text-transform: none; letter-spacing: normal; word-spacing: normal; overflow-wrap: normal; white-space: nowrap; float: none; direction: ltr; max-width: none; max-height: none; min-width: 0px; min-height: 0px; border: 0px; padding: 0px; margin: 0px; }
-.MathJax_SVG * { transition: none 0s ease 0s; }
-.MathJax_SVG_Display svg { vertical-align: middle !important; margin-bottom: 0px !important; margin-top: 0px !important; }
+.MathJax_SVG { display: inline; font-style: normal; font-weight: 400; line-height: normal; zoom: 90%; text-indent: 0px; text-align: left; text-transform: none; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; direction: ltr; max-width: none; max-height: none; min-width: 0px; min-height: 0px; border: 0px; padding: 0px; margin: 0px; }
+.MathJax_SVG * { transition: none; }
+.MathJax_SVG_Display svg { vertical-align: middle !important; margin-bottom: 0px !important; }
 .os-windows.monocolor-emoji .md-emoji { font-family: "Segoe UI Symbol", sans-serif; }
 .md-diagram-panel > svg { max-width: 100%; }
-[lang="mermaid"] svg, [lang="flow"] svg { max-width: 100%; height: auto; }
+[lang="mermaid"] svg, [lang="flow"] svg { max-width: 100%; }
 [lang="mermaid"] .node text { font-size: 1rem; }
 table tr th { border-bottom: 0px; }
 video { max-width: 100%; display: block; margin: 0px auto; }
@@ -150,6 +148,10 @@ iframe { max-width: 100%; width: 100%; border: none; }
 
 
 :root { --side-bar-bg-color: #fafafa; --control-text-color: #777; }
+@font-face { font-family: "Open Sans"; font-style: normal; font-weight: normal; src: local("Open Sans Regular"), url("./github/400.woff") format("woff"); }
+@font-face { font-family: "Open Sans"; font-style: italic; font-weight: normal; src: local("Open Sans Italic"), url("./github/400i.woff") format("woff"); }
+@font-face { font-family: "Open Sans"; font-style: normal; font-weight: bold; src: local("Open Sans Bold"), url("./github/700.woff") format("woff"); }
+@font-face { font-family: "Open Sans"; font-style: italic; font-weight: bold; src: local("Open Sans Bold Italic"), url("./github/700i.woff") format("woff"); }
 html { font-size: 16px; }
 body { font-family: "Open Sans", "Clear Sans", "Helvetica Neue", Helvetica, Arial, sans-serif; color: rgb(51, 51, 51); line-height: 1.6; }
 #write { max-width: 860px; margin: 0px auto; padding: 30px 30px 100px; }
@@ -181,20 +183,20 @@ blockquote blockquote { padding-right: 0px; }
 table { padding: 0px; word-break: initial; }
 table tr { border-top: 1px solid rgb(223, 226, 229); margin: 0px; padding: 0px; }
 table tr:nth-child(2n), thead { background-color: rgb(248, 248, 248); }
-table tr th { font-weight: bold; border-width: 1px 1px 0px; border-top-style: solid; border-right-style: solid; border-left-style: solid; border-top-color: rgb(223, 226, 229); border-right-color: rgb(223, 226, 229); border-left-color: rgb(223, 226, 229); border-image: initial; border-bottom-style: initial; border-bottom-color: initial; margin: 0px; padding: 6px 13px; }
-table tr td { border: 1px solid rgb(223, 226, 229); margin: 0px; padding: 6px 13px; }
+table tr th { font-weight: bold; border-width: 1px 1px 0px; border-top-style: solid; border-right-style: solid; border-left-style: solid; border-top-color: rgb(223, 226, 229); border-right-color: rgb(223, 226, 229); border-left-color: rgb(223, 226, 229); border-image: initial; border-bottom-style: initial; border-bottom-color: initial; text-align: left; margin: 0px; padding: 6px 13px; }
+table tr td { border: 1px solid rgb(223, 226, 229); text-align: left; margin: 0px; padding: 6px 13px; }
 table tr th:first-child, table tr td:first-child { margin-top: 0px; }
 table tr th:last-child, table tr td:last-child { margin-bottom: 0px; }
 .CodeMirror-lines { padding-left: 4px; }
 .code-tooltip { box-shadow: rgba(0, 28, 36, 0.3) 0px 1px 1px 0px; border-top: 1px solid rgb(238, 242, 242); }
 .md-fences, code, tt { border: 1px solid rgb(231, 234, 237); background-color: rgb(248, 248, 248); border-radius: 3px; padding: 2px 4px 0px; font-size: 0.9em; }
 code { background-color: rgb(243, 244, 244); padding: 0px 2px; }
-.md-fences { margin-bottom: 15px; margin-top: 15px; padding-top: 8px; padding-bottom: 6px; }
+.md-fences { margin-bottom: 15px; margin-top: 15px; padding: 8px 1em 6px; }
 .md-task-list-item > input { margin-left: -1.3em; }
 @media print {
   html { font-size: 13px; }
   table, pre { break-inside: avoid; }
-  pre { overflow-wrap: break-word; }
+  pre { word-wrap: break-word; }
 }
 .md-fences { background-color: rgb(248, 248, 248); }
 #write pre.md-meta-block { padding: 1rem; font-size: 85%; line-height: 1.45; background-color: rgb(247, 247, 247); border: 0px; border-radius: 3px; color: rgb(119, 119, 119); margin-top: 0px !important; }
@@ -218,13 +220,15 @@ header, .context-menu, .megamenu-content, footer { font-family: "Segoe UI", Aria
 .html-for-mac .context-menu { --item-hover-bg-color: #E6F0FE; }
 #md-notification .btn { border: 0px; }
 .dropdown-menu .divider { border-color: rgb(229, 229, 229); }
-.ty-preferences .window-content { background-color: rgb(250, 250, 250); }
-.ty-preferences .nav-group-item.active { color: white; background: rgb(153, 153, 153); }
+
+
+
+
 
  .typora-export li, .typora-export p, .typora-export,  .footnote-line {white-space: normal;} 
 </style>
 </head>
 <body class='typora-export os-windows' >
-<div  id='write'  class = 'is-node'><h2><a name="about-tmn07p" class="md-header-anchor"></a><span>About Tmn07P</span></h2><p><span>常用ID：Tmn07，线下叫07就可以了（虽然也不少人叫tmn了</span></p><p><span>p龄一年，まつり担当，茉莉朋花(まつとも)推，请多指教~</span></p><p><span>喜欢的小偶像还有卯月，真乃，甘奈，甜花等等，trysail推</span></p><p><a href='https://github.com/qq519043202'><span>github</span></a><span>，</span><a href='https://space.bilibili.com/8162825'><span>bilibili</span></a><span>同名id都能搜到我， 不过写的代码、做的视频都是很水的，菜与懒是原罪</span></p><p><span>日语英语堪忧，日语听力尚可，无写作阅读对话能力</span></p><h2><a name="live经历" class="md-header-anchor"></a><span>Live经历</span></h2><p><span>2019-05-18 台北 今井麻美巡演 临场补的VIP尾票</span></p><p><span>2019-05-19 台北 ML6th Princess Station Day2 Living viewing 一列</span></p><p><span>2019-07-21 BMLSP2019 无爱马仕成分，主要去锻炼体验一下，毕竟还没去过大一点的live</span></p><p><span>2019-09-20/21 ML6th SP 日本SSA，第一次远征，山顶与stage side一列，感谢MTG系列。准备远征的经历特别折腾，特别是票，太难搞了诶，不过能够一次见齐所有人真是太好了。遗憾的是没能公布一些惊喜（</span></p><p><span>之后有机会的话，比较想去shinycolor 2nd和moiw，如果百万MTW出了茉莉朋花的unit 那ML7th富士急也会想去的（由于6th SSA场对于个人来说已经特别特别满意了，有点担心7th不能给我太大的震撼，目前去的欲望不大，大平地顶不住）</span></p><h2><a name="相关项目" class="md-header-anchor"></a><span>相关项目</span></h2><p><span>show まつり插件下载地址：</span><img src="http://tmn07.com/p/search.png" style="width: 200px; margin-top: -10px;"></p><ul><li><span>chrome store地址：</span><a href='http://bit.ly/2B3oGkc' target='_blank' class='url'>http://bit.ly/2B3oGkc</a></li><li><span>镜像地址：</span><a href='http://tmn07.com/showhime-1.2.1.crx' target='_blank' class='url'>http://tmn07.com/showhime-1.2.1.crx</a></li></ul><p><span>MLTD档线纵向对比：</span><a href='http://tmn07.com/rank/' target='_blank' class='url'>http://tmn07.com/rank/</a></p><p><span>歌词字幕转化脚本：</span><a href='https://github.com/qq519043202/lrc2srt' target='_blank' class='url'>https://github.com/qq519043202/lrc2srt</a></p><p><span>ffmpeg剪辑视频小记：</span><a href='https://git.io/fhSBj' target='_blank' class='url'>https://git.io/fhSBj</a></p><p><span>均开放源码，在github上都可以找到，欢迎pr&amp;issue</span></p><h2><a name="相关视频" class="md-header-anchor"></a><span>相关视频</span></h2><p><span>诹访彩花ML正式live歌曲片段 剪辑字幕 </span><a href='https://www.bilibili.com/video/av57315811'><span>组曲</span></a><span> </span><a href='https://www.bilibili.com/video/av55596931'><span>solo</span></a><span> （不含部分重复歌曲+全体曲，下同）</span></p><p><span>木户衣吹ML正式live歌曲片段 </span><a href='https://www.bilibili.com/video/av64094875'><span>av64094875</span></a></p><p><span>百位CP系列 即cp的live歌曲片段 </span><a href='https://www.bilibili.com/video/av57755436'><span>静香志保</span></a><span> </span><a href='https://www.bilibili.com/video/av57881811'><span>杏百合</span></a><span> （茉莉朋花、mocho与大家 待做，欢迎大家来推荐）</span></p><p><span>MLTD改系列 游戏solo MV替换solo音源 </span><a href='https://www.bilibili.com/video/av61468667'><span>Eternal Harmony 德川茉莉ver.</span></a><span> </span><a href='https://www.bilibili.com/video/av63422468'><span>ランニング・ハイッ 横山奈绪ver.</span></a><span> </span></p><h2><a name="入坑历程" class="md-header-anchor"></a><span>入坑历程</span></h2><p><span>感觉入坑的过程挺奇妙的就记录一下，方便回忆</span></p><p><span>由于写着写着太长了，放到另外一页去了 </span><a href='St@rt.html'><span>07开始做Producer了</span></a></p><h2><a name="其他" class="md-header-anchor"></a><span>其他</span></h2><p><span>这个域名tmn07.com应该会一直留着，不过之后可能还会改一改主页</span></p><p><span>最后放一下当前这版的名片，期待相遇更多同僚</span></p><p><img src="http://tmn07.com/p/card2.jpg" referrerpolicy="no-referrer"></p></div>
+<div  id='write'  class = 'is-node'><h1><a name='header-n0' class='md-header-anchor '></a>About Tmn07P</h1><p>昵称全名Tmn07，大家叫07就可以了</p><p>新人producer，まつり担当，请多指教~</p><p><a href='https://github.com/qq519043202'>github</a>，<a href='https://space.bilibili.com/8162825'>bilibili</a>同名id都能搜到我， 不过写的代码、做的视频都是很水的，菜是原罪</p><p>show hime插件下载地址：<a href='http://tmn07.com/showhime.crx' target='_blank' class='url'>http://tmn07.com/showhime.crx</a></p><p>这个tmn07.com的域名应该会一直续下去，现在就放一下刚刚做的名片初稿吧</p><p>（话说，有人在名片又缺德又DD的吗，太草了（</p><p><img src='http://tmn07.com/p/0.jpg' alt='名片正面' referrerPolicy='no-referrer' /></p><p><img src='http://tmn07.com/p/1.jpg' alt='名片背面' referrerPolicy='no-referrer' /></p></div>
 </body>
 </html>
