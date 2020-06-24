@@ -12,47 +12,59 @@ p龄一年半，まつり担当，茉莉朋花(まつとも)推，请多指教~
 
 ## Live经历
 
-2019-05-18 台北 今井麻美巡演
+2019-05-18 台北 今井麻美 Asia Tour 2019「Anniversary」
 
 2019-05-19 台北 ML6th Princess Station Day2 Living viewing
 
-2019-07-21 BMLSP2019（虽然没爱马仕
+2019-07-21 上海 BMLSP2019（虽然没爱马仕
 
-2019-09-20/21 ML6th SP in SSA
+2019-09-20/21 东京 ML6th SP in SSA
 
-—————无情分割线—————
+—————惨淡2020—————
 
-2020-03 sc春趴中票后取消
+2020-03 SC春趴取消
 
-2020-05 sc2nd多轮未中且取消，ML7th富士急中票危在旦夕
-
-2020-？？？ 希望早点恢复吧。什么都可以没有，希望4家5家合同还能安排上
+2020-05 ML7th富士急取消
 
 ## 相关投稿视频
 
-全部下架了.....等疫情恢复回学校后，争取彩花生日前，把全部片段截取传出来
+彩花全live演出片段：https://www.bilibili.com/video/BV1RT4y1u7sE
+
+小小ASMR相关搬运：https://www.bilibili.com/video/BV1KK4y1b7Cu
 
 ## 相关项目
 
-show まつり插件下载地址：<img src="http://tmn07.com/p/search.png" style="width: 200px; ">
+#### 开发向
 
-- chrome store地址：http://bit.ly/2B3oGkc
+<img src="http://tmn07.com/p/search.png" style="width: 200px; ">Chrome store地址：http://bit.ly/2B3oGkc
 
-MLTD档线纵向对比：http://tmn07.com/rank/
+或者：https://chrome.google.com/webstore/detail/fmbdbinfkpiajgbhlapkcnimdfaoaoep
 
-百万常用书签： http://tmn07.com/m 
+MLTD档线纵向对比：http://tmn07.com/rank/ （老服务被端了，等待修复）
 
-歌词字幕转化脚本：https://github.com/qq519043202/lrc2srt
+闪耀色彩键盘助手：https://git.io/Jfqss
 
-ffmpeg剪辑视频小记：https://git.io/fhSBj
+闪耀色彩感谢祭计算器：http://tmn07.com/gxj/
+
+（歌词字幕转化脚本：https://git.io/Jfp2q
 
 均开放源码，在github上都可以找到，欢迎pr&issue
+
+#### 整理向
+
+百万常用书签： http://tmn07.com/m/
+
+闪耀色彩部分书签：http://tmn07.com/sc.html
+
+土豆周年档线记录：http://tmn07.com/anniv/
+
+ffmpeg剪辑视频小记：https://git.io/fhSBj
 
 ## 其他
 
 [奇妙的入坑经历？](St@rt.html)
 
-这个域名tmn07.com应该会一直留着，虽然最近碰到备案的难题。CDN需要备案吗.jpg
+这个域名tmn07.com应该会一直留着，以后会变成什么东西就不知道了；最近被国内服务gank了，白嫖走到了尽头，老老实实用github page先苟一苟了...部分网页访问会变慢见谅.
 
 最后放一下当前这版的名片，期待相遇更多同僚
 
