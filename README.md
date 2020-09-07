@@ -1,3 +1,13 @@
+# 快捷导航
+
+<a href="http://tmn07.com/m">百万常用书签</a>
+
+<a href="http://tmn07.com/sc.html">闪耀色彩部分书签</a>
+
+*****************
+
+# 以下是个人吹水
+
 ## About Tmn07P
 
 常用ID：Tmn07，线下叫07就可以了（虽然也不少人叫tmn了
