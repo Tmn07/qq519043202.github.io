@@ -8,7 +8,7 @@
 
 档线情报，卡图： [イベント | Fantasia | matsurihi.me](https://mltd.matsurihi.me/)
 
-队伍算分，活动控分： [HOME | みりしたつーる](https://megmeg.work/mltd/) （新歌未更新
+队伍算分，活动控分： [HOME | みりしたつーる](https://megmeg.work/mltd/) （新歌更新较慢
 
 活动pt消耗石头计算器： [ノルマ計算機](https://432web.net/2018/01/03/021240/ )
 
@@ -18,7 +18,7 @@ imas-db： [ライブイベント関連情報 - アイマス楽曲・CDデータ
 
 情报网站，抠图信息等： [doorblog.jp](http://greemas.doorblog.jp/archives/51320145.html )
 
-CD发售信息主要由烂铁官网第一时间透露。其次可以去类似这样的CD信息网站 [THE IDOLM@STER MILLION LIVE! THEATER DAYS - VGMdb](https://vgmdb.net/product/7636)
+CD发售信息可能由烂铁官网第一时间透露。其次可以去类似这样的CD信息网站 [THE IDOLM@STER MILLION LIVE! THEATER DAYS - VGMdb](https://vgmdb.net/product/7636)
 
 全部live，音乐相关信息： [アイマスライブセトリ](https://music765plus.com/) 
 

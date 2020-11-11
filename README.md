@@ -50,7 +50,7 @@ p龄一年半，まつり担当，茉莉朋花(まつとも)推，请多指教~
 
 或者：https://chrome.google.com/webstore/detail/fmbdbinfkpiajgbhlapkcnimdfaoaoep
 
-MLTD档线纵向对比：http://tmn07.com/rank/ （老服务被端了，等待修复）
+MLTD档线纵向对比：http://tmn07.com/rank/ （老服务被端了，目前无法使用）
 
 闪耀色彩键盘助手：https://git.io/Jfqss
 
