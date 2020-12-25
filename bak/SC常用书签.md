@@ -8,3 +8,4 @@
 
 [感谢祭计算器]( http://tmn07.com/gxj/ )
 
+[卡图与抠图](https://shinymas.net/illust)
