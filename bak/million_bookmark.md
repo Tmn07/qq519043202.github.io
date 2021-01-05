@@ -1,14 +1,16 @@
 ## MLTD
 
-*卡图，2d衣服等图片素材  ：[ミリシタDB](http://imas.gamedbs.jp/mlth/) 
-
-*ssr周期，3d服装： [ミリシタキャラDB](http://mirishitadb.php.xdomain.jp/db/#ssr) （部分内容停止更新?
-
 常用wiki： [アイマス ミリシタ攻略まとめwiki](https://imasml-theater-wiki.gamerch.com/) 
 
 档线情报，卡图： [イベント | Fantasia | matsurihi.me](https://mltd.matsurihi.me/)
 
-队伍算分，活动控分： [HOME | みりしたつーる](https://megmeg.work/mltd/) （新歌更新较慢
+*卡图，2d衣服等图片素材  ：[ミリシタDB](http://imas.gamedbs.jp/mlth/) 
+
+*ssr周期，3d服装： [ミリシタキャラDB](http://mirishitadb.php.xdomain.jp/db/#ssr) （部分内容停止更新?
+
+活动控分，部分游戏情报： [HOME | みりしたつーる](https://megmeg.work/mltd/) （打歌分数计算更新停止）
+
+计算打歌分数：https://app.i-mas.ml/score 或 [某python程序](https://gist.github.com/hiside0/ef105417db6b4aa4922eec5139714644)
 
 活动pt消耗石头计算器： [ノルマ計算機](https://432web.net/2018/01/03/021240/ )
 
