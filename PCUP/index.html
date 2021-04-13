@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Pcup实时档线排名</title>
+    <meta charset="utf-8">
+    <script type="text/javascript" src="jquery.min.js"></script>
+</head>
+<body>
+<h1>Pcup实时档线排名 加载中..</h1>
+<div id="loading_txt">
+    <p></p>
+</div>
+<script type="text/javascript">
+
+
+var testdiv = document.getElementById("loading_txt");
+
+// url = "https://api.matsurihi.me/sc/v1/events/fanRanking/40006/rankings/logs/1/10,100,1000";
+event_id = '40006'
+// idol_id = '1'
+al = ['櫻木真乃','風野灯織','八宮めぐる','月岡恋鐘','田中摩美々','白瀬咲耶','三峰結華','幽谷霧子','小宮果穂','園田智代子','西城樹里','杜野凛世','有栖川夏葉','大崎甘奈','大崎甜花','桑山千雪','芹沢あさひ','黛冬優子','和泉愛依','浅倉透','樋口円香','福丸小糸','市川雛菜','七草にちか','緋田美琴'];
+
+var dataA = {};
+var count = 1;
+
+function getdata(idol_id){
+    $.ajax({
+        dataType: 'json',
+        url: 'https://api.matsurihi.me/sc/v1/events/fanRanking/' + event_id + '/rankings/logs/'+ idol_id +'/10,100,1000,3000' ,
+        data: { prettyPrint: false },
+        error: function (jqXHR, textStatus, errorThrown) {
+            console.log('error'+idol_id);
+            document.write("<h2>加载失败请尝试更换网络环境*</h2>");
+        },
+        success: function (data) {
+            var para = document.createElement("p");
+            para.innerText= al[count - 1]+'加载完成';
+            testdiv.appendChild(para);
+            dataA[count] = data;
+            count++;
+            if (idol_id<25){
+                getdata(idol_id+1);
+            }
+            else {
+                console.log('finish')
+                getrank(10);
+                getrank(100);
+                getrank(1000);
+                getrank(3000);
+            }
+
+        }
+    });
+};
+
+function getrank(rrank) {
+    if (rrank == 10) {
+        rank = 0
+    }
+    if (rrank == 100) {
+        rank = 1
+    }
+    if (rrank == 1000) {
+        rank = 2
+    }
+    if (rrank == 1000) {
+        rank = 3
+    }
+    var idlist = [];
+    var data1000 = [];
+
+    for (var i = 1; i <= 25; i++) {
+        if (dataA[i].hasOwnProperty(rank)) {
+            var len = dataA[i][rank].data["length"];
+            idlist.push(al[i - 1]);
+            data1000.push(dataA[i][rank].data[len - 1].score)
+        }
+    }
+    for (var i = 0; i < data1000.length; i++) {
+        for (var j = i; j < data1000.length; j++) {
+            if (data1000[j] > data1000[i]) {
+                tmp = data1000[j];
+                data1000[j] = data1000[i];
+                data1000[i] = tmp;
+                tmp2 = idlist[j];
+                idlist[j] = idlist[i];
+                idlist[i] = tmp2
+            }
+        }
+    }
+    document.writeln("<h2>"+rrank + "位排名</h2>");
+    for (var i = 0; i < data1000.length; i++) {
+        document.write(i + 1 + " " + idlist[i] + " : " + data1000[i] + "<br>")
+    }
+}
+
+
+getdata(1);
+
+</script>
+</body>
+</html>
