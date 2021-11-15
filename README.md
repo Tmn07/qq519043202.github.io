@@ -10,15 +10,17 @@
 
 ## About Tmn07P
 
-常用ID：Tmn07，线下叫07就可以了（虽然也不少人叫tmn了
+常用ID：Tmn07，线下叫07就可以了（虽然也不少人叫tmn了）目前常驻南京，欢迎同僚一起玩耍。
 
-p龄一年半，まつり担当，茉莉朋花(まつとも)推，请多指教~
+P龄三年，まつり担当，茉莉朋花(まつとも)推，请多指教~
 
-喜欢的小偶像还有卯月，真乃，甘奈，甜花等等，trysail推
+喜欢的小偶像还有卯月，真乃，甘奈，甜花，雏菜等等
 
-[github](https://github.com/qq519043202)，[bilibili](https://space.bilibili.com/8162825)同名id都能搜到我， 不过写的代码、做的视频都是很水的，菜与懒是原罪并且受到疫情影响，就业形式严峻...希望顺利毕业，找到合适工作，经济相对自由更好的支持小偶像们
+声优的话，喜欢诹访彩花和守屋亨香还有种田大法好。组合TrySail，DIALOGUE+有关注一些
 
-日语英语堪忧，日语听力尚可，无写作阅读对话能力
+[github](https://github.com/qq519043202)，[bilibili](https://space.bilibili.com/8162825)同名id都能搜到我， 不过写的代码、做的视频都是很水的，菜与懒是原罪
+
+日语英语堪忧，日语听力有点，无写作阅读对话能力
 
 ## Live经历
 
@@ -36,9 +38,11 @@ p龄一年半，まつり担当，茉莉朋花(まつとも)推，请多指教~
 
 2020-05 ML7th富士急取消
 
+———然后全面转成观影人———
+
 ## 相关投稿视频
 
-彩花全live演出片段：https://www.bilibili.com/video/BV1RT4y1u7sE
+彩花全live演出片段：https://www.bilibili.com/video/BV1Vv411p7ka
 
 小小ASMR相关搬运：https://www.bilibili.com/video/BV1KK4y1b7Cu
 
@@ -50,13 +54,13 @@ p龄一年半，まつり担当，茉莉朋花(まつとも)推，请多指教~
 
 或者：https://chrome.google.com/webstore/detail/fmbdbinfkpiajgbhlapkcnimdfaoaoep
 
-MLTD档线纵向对比：http://tmn07.com/rank/ （老服务被端了，目前无法使用）
+MLTD档线纵向对比：http://tmn07.com/rank/ (引用了matsurihi.me API考验网络情况*)
 
-闪耀色彩键盘助手：https://git.io/Jfqss
+闪耀色彩键盘助手：https://git.io/Jfqss （直到游戏淡坑了，也没把录制脚本完善）
 
-闪耀色彩感谢祭计算器：http://tmn07.com/gxj/
+闪耀色彩感谢祭计算器：http://tmn07.com/gxj/ （写完第二周出了G.R.A.D.直接退环境，不过也就摸了几小时而已）
 
-（歌词字幕转化脚本：https://git.io/Jfp2q
+歌词字幕转化脚本：https://git.io/Jfp2q （也能做卡拉ok字幕了，不过比较难看）
 
 均开放源码，在github上都可以找到，欢迎pr&issue
 
@@ -68,14 +72,12 @@ MLTD档线纵向对比：http://tmn07.com/rank/ （老服务被端了，目前�
 
 土豆周年档线记录：http://tmn07.com/anniv/
 
-ffmpeg剪辑视频小记：https://git.io/fhSBj
-
 ## 其他
 
 [奇妙的入坑经历？](St@rt.html)
 
-这个域名tmn07.com应该会一直留着，以后会变成什么东西就不知道了；最近被国内服务gank了，白嫖走到了尽头，老老实实用github page先苟一苟了...部分网页访问会变慢见谅.
+这个域名tmn07.com应该会一直留着，不过以后会变成什么东西就不知道了；目前这个服务器薅羊毛到24年，到时候再看要迁移到哪。
 
-最后放一下当前这版的名片，期待相遇更多同僚
+最后放一下当前这版的名片，期待相遇更多同僚（这版要发完了，考虑再搞点
 
-![](http://tmn07.com/p/card2.jpg)
+![名刺](http://tmn07.com/p/card2.jpg)
