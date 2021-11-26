@@ -8,15 +8,18 @@
 <body>
 <h1>Pcup实时档线排名 加载中..</h1>
 <div id="loading_txt">
-    <p></p>
+    <p>可通过get方法提供id来指定活动，PCUP活动id参考： <a href="https://api.matsurihi.me/sc/v1/events/fanRanking" target="_blank">https://api.matsurihi.me/sc/v1/events/fanRanking</a></p>
 </div>
-<script type="text/javascript">
+<script type="text/javascript"> 
+// function & data
+$.urlParam = function(name){
+    var results = new RegExp('[\?&]' + name + '=([^&#]*)').exec(window.location.href);
+    if (results==null) {
+       return null;
+    }
+    return decodeURI(results[1]) || 0;
+}
 
-
-var testdiv = document.getElementById("loading_txt");
-
-// url = "https://api.matsurihi.me/sc/v1/events/fanRanking/40006/rankings/logs/1/10,100,1000";
-event_id = '40006'
 // idol_id = '1'
 al = ['櫻木真乃','風野灯織','八宮めぐる','月岡恋鐘','田中摩美々','白瀬咲耶','三峰結華','幽谷霧子','小宮果穂','園田智代子','西城樹里','杜野凛世','有栖川夏葉','大崎甘奈','大崎甜花','桑山千雪','芹沢あさひ','黛冬優子','和泉愛依','浅倉透','樋口円香','福丸小糸','市川雛菜','七草にちか','緋田美琴'];
 
@@ -43,6 +46,8 @@ function getdata(idol_id){
             }
             else {
                 console.log('finish')
+                document.writeln("<h1>event_id: "+ event_id + "</h1>");
+                document.writeln("<p>可通过get方法提供id来指定活动，PCUP活动id参考： <a href='https://api.matsurihi.me/sc/v1/events/fanRanking' target='_blank'>https://api.matsurihi.me/sc/v1/events/fanRanking</a></p>");
                 getrank(10);
                 getrank(100);
                 getrank(1000);
@@ -54,6 +59,7 @@ function getdata(idol_id){
 };
 
 function getrank(rrank) {
+
     if (rrank == 10) {
         rank = 0
     }
@@ -94,6 +100,16 @@ function getrank(rrank) {
     }
 }
 
+</script>
+
+<script type="text/javascript">
+// main
+var testdiv = document.getElementById("loading_txt");
+var event_id = '40007';
+
+if ($.urlParam('id')) {
+    event_id = $.urlParam('id');
+}
 
 getdata(1);
 
