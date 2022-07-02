@@ -57,6 +57,7 @@ var dataA = {};
 var count = 1;
 l = window.location.href.split('/')
 event_id = l[l.length-1]
+event_id = event_id.split("#")[0]
 
 function getdata(idol_id) {
     $.ajax({
