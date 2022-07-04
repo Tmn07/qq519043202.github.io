@@ -1,11 +1,14 @@
+// https://jscompress.com/
+
 event_name="4周年"
 event_id = 192
-
-base_X = 1656516600000 // 5th fixed?
-step_X = 1800000
-
+// event_name="3周年"
+// event_id = 142
 
 var now_charts = $("#chart-idol").highcharts();
+base_X = now_charts.series[0].processedXData[0];
+step_X = 1800000
+step_X_lastday = 300000
 
 al={
     "0":"天海春香",
@@ -78,12 +81,27 @@ function build_series(data) {
         series = []
         // 864
         start_i = 864-data[j].data.length
-        for (var i = start_i; i < data[j].data.length; i++) {
+        for (var i = start_i; i <= 575; i++) {
             point = {}
             point.x = base_X+step_X*i
-            point.y = data[j].data[i].score
+            point.y = data[j].data[i-start_i].score
             series.push(point)
         }
+        base_X_lastday = point.x
+        // lastday_i = 576
+        // lastday_i = data[j].data.length-288
+        for (var i = 576; i < 863; i++) {
+            point = {}
+            point.x = base_X_lastday+step_X_lastday*(i-575)
+            point.y = data[j].data[i-start_i].score
+            series.push(point)
+        }
+
+
+        point = {}
+        point.x = series[series.length-1].x+2100000
+        point.y = data[j].data[data[j].data.length-1].score
+        series.push(point)
         series_list.push(series)
     }
     return series_list
@@ -105,15 +123,14 @@ $.ajax({
         // 不可见？
         // 同时加多个？ 渲染效率更高？
         now_charts.addSeries({
-            name: "4周年-10位",
+            name: event_name+"-10位",
             data: series_list[0]
         });
         now_charts.addSeries({
-            name: "4周年-100位",
+            name: event_name+"-100位",
             data: series_list[1]});
         now_charts.addSeries({
-            name: "4周年-1000位",
+            name: event_name+"-1000位",
             data: series_list[2]});
     }
 })
-
